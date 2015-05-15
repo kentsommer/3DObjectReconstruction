@@ -1,0 +1,11 @@
+function X = rot2quat(R)
+a = det(R);
+R = sign(a)*R/abs(a)^(1/3);
+t = trace(R);
+r = sqrt(1+t);
+s = 0.5/r;
+w = 0.5*r;
+x = (R(3,2)-R(2,3))*s;
+y = (R(1,3)-R(3,1))*s;
+z = (R(2,1)-R(1,2))*s;
+X = [x;y;z;w];

@@ -1,0 +1,17 @@
+function [X,Nimages,Npts] = packcalibration(K,Q,T,pts3d)
+% [X,Nimages,Npts] = packcalibration(K,Q,T,pts3d)
+Nimages = length(Q);
+Npts = size(pts3d,1);
+K=K/K(3,3);
+k=zeros(5,1);
+k(1) = K(1,1);
+k(2) = K(2,2);
+k(3) = K(1,2);
+k(4) = K(1,3);
+k(5) = K(2,3);
+q = cell2mat(Q);
+q=q(:);
+t = cell2mat(T);
+t=t(:);
+p = pts3d(:);
+X=[k;q;t;p];
