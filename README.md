@@ -1,7 +1,5 @@
 3D Object Reconstruction
 =====================================
-
-By: Josh Stegman, Jordan Hayes, and Kent Sommer
 For: CSCI 5561 - Intro to Computer Vision
 
 Requirments:
